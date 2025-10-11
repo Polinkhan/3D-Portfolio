@@ -1,4 +1,4 @@
-name: Deploy Next.js to EC2
+name: Deploy Next.js Portfolio to EC2
 
 on:
   push:
@@ -24,6 +24,9 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
+      - name: Archive full project
+        run: tar -czf build.tar.gz --ignore-failed-read .next package.json public next.config.js node_modules
+
       - name: Backup current app
         uses: appleboy/ssh-action@v0.1.5
         with:
@@ -37,14 +40,26 @@ jobs:
               mv "$TARGET_DIR" "${TARGET_DIR}_backup_$timestamp"
             fi
 
-      - name: Copy files to EC2
+      - name: Copy build file to EC2
         uses: appleboy/scp-action@v0.1.5
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: ".next package.json public next.config.js node_modules"
+          source: "build.tar.gz"
           target: "${{ secrets.APP_DIR }}"
+
+      - name: Extract build to portfolio on EC2
+        uses: appleboy/ssh-action@0.1.5
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            TARGET_DIR="${{ secrets.APP_DIR }}/portfolio"
+            mkdir -p "$TARGET_DIR"
+            tar -xzf ${{ secrets.APP_DIR }}/build.tar.gz -C "$TARGET_DIR"
+            rm ${{ secrets.APP_DIR }}/build.tar.gz
 
       - name: Restart app on EC2
         uses: appleboy/ssh-action@v0.1.5
@@ -53,6 +68,6 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ${{ secrets.APP_DIR }}
+            cd ${{ secrets.APP_DIR }}/portfolio
             npm install --production
-            pm2 restart 0 || pm2 start npm --name "next-app" -- start
+            pm2 restart next-app || pm2 start npm --name "next-app" -- start
