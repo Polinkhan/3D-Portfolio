@@ -36,6 +36,11 @@ jobs:
           script: |
             timestamp=$(date +%Y%m%d%H%M%S)
             TARGET_DIR="${{ secrets.APP_DIR }}/portfolio"
+
+            # Remove old backups
+            rm -rf "${TARGET_DIR}_backup_"*
+
+            # Create new backup if app exists
             if [ -d "$TARGET_DIR" ]; then
               mv "$TARGET_DIR" "${TARGET_DIR}_backup_$timestamp"
             fi
