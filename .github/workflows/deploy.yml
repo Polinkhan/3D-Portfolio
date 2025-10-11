@@ -32,8 +32,9 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             timestamp=$(date +%Y%m%d%H%M%S)
-            if [ -d "${{ secrets.APP_DIR }}" ]; then
-              mv ${{ secrets.APP_DIR }} "${{ secrets.APP_DIR }}_backup_$timestamp"
+            TARGET_DIR="${{ secrets.APP_DIR }}/portfolio"
+            if [ -d "$TARGET_DIR" ]; then
+              mv "$TARGET_DIR" "${TARGET_DIR}_backup_$timestamp"
             fi
 
       - name: Copy files to EC2
