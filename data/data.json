@@ -1,0 +1,296 @@
+{
+  "home": {
+    "name": "Abu Sayed Polin",
+    "header": {
+      "start": "Ensuring ",
+      "colored": "top-quality ",
+      "end": "project outcomes"
+    },
+    "heilightText": "Modern Web | Full Stack | DevSecOps | Cloud infrastructure",
+    "description": "Hi, I'm Abu Sayed Polin, a Full Stack Engineer creating web, mobile, and desktop experiences. Take a look at my projects and skills."
+  },
+  "work": {
+    "header": "My Works",
+    "label": "Checkout a few of my works!",
+    "workList": [
+      {
+        "name": "Vizor (Serverless System Monitoring)",
+        "description": "Vizor is a real-time monitoring and service management platform that empowers IT teams with livemetrics on CPU, memory, and network usage. Easily manage service statuses, start, stop, or restartservices, and monitor logs in real time with instant filtering. Vizor provides complete systemvisibility and control, ensuring smooth operations and rapid issue resolution from a single interface.",
+        "tools": ["react", "python", "web-socket"],
+        "source": {
+          "live": "https://vizor.polinkhan.com",
+          "github": "https://github.com/Polinkhan/vizor-system-monitoring"
+        },
+        "img": "/images/vizor.png"
+      },
+      {
+        "name": "Blogs Web App",
+        "description": "A blog web app with Next.js, MySQL, and Prisma, utilizing NextAuth for secure authentication. The blog features a variety of content, including React tips and tricks, installation guides for popular programs, and comprehensive documentation. It provides valuable resources for developers, with a user-friendly interface, ensuring easy access to insightful tutorials and articles.",
+        "tools": ["next-js", "my-sql", "prisma"],
+        "source": {
+          "live": "https://blogs.polinkhan.com",
+          "github": "https://github.com/Polinkhan/Blogs"
+        },
+        "img": "/images/blogs.png"
+      },
+      {
+        "name": "Realtime Sign Detection and Classification",
+        "description": "The development version of our browser-based sign language detection app. This prototype runs AI models natively, performing real-time hand detection and sign classification directly on your device. No external servers are needed, allowing you to explore its functionality as we continue refining its performance and accuracy.",
+        "tools": ["react", "pytorch", "tensorflow-js"],
+        "source": {
+          "live": "https://computervision.polinkhan.com/",
+          "github": "https://github.com/Polinkhan/Realtime-Sign-Detection-and-Classification"
+        },
+        "img": "/images/bdsl_classification.png"
+      },
+      {
+        "name": "Nippon Management",
+        "description": "Nippon Management is a web app designed to streamline employee task tracking and management. It supports role-based authorization, enabling admins to create multiple users, teams, and groups. Admins can assign tasks to specific groups, with automated notifications triggered by a cron system. The app allows the creation of recurring schedules for tasks, and employees can submit documents and track their work details. It enhances productivity and collaboration through efficient task management and reporting.",
+        "credential": { "username": "guest", "password": "12345" },
+        "tools": ["react", "express-js", "my-sql", "prisma"],
+        "source": {
+          "live": "https://nippon.polinkhan.com/",
+          "github": "https://github.com/Polinkhan/Nippon-Management"
+        },
+        "img": "/images/nippon_management.png"
+      },
+      {
+        "name": "Super Chat 2.0",
+        "description": "This chat app built with Next.js and WebSocket enables real-time communication through global chat, personal chat, and group chat features. Users can instantly send and receive messages, create new chat groups, or join existing ones. The app provides seamless and interactive messaging, offering a dynamic and engaging chat experience for users.",
+        "tools": ["next-js", "my-sql", "prisma", "web-socket"],
+        "source": {
+          "live": "https://superchat.polinkhan.com/",
+          "github": "https://github.com/Polinkhan/superchat"
+        },
+        "img": "/images/superchat.png"
+      },
+      {
+        "name": "Nippon Payroll Management",
+        "description": "Nippon Payroll Management is a React Native mobile app that allows employees to view and search their payroll slips. The app integrates with Box Drive via its SDK to securely store and fetch payroll slips. It provides easy access to payroll data, enhancing convenience and transparency for employees.",
+        "tools": ["react-native", "express-js", "my-sql", "prisma", "box-sdk"],
+        "source": {
+          "github": "https://github.com/Polinkhan/Nippon-Steel/tree/v5"
+        },
+        "img": "/images/nippon.png"
+      },
+      {
+        "name": "PC Monitor",
+        "description": "This React Native mobile app is designed to monitor PC metrics, including CPU usage, memory, services, and process management. Users can execute commands, kill processes, and track system performance directly from their mobile devices. The app provides a convenient way to manage and monitor PC health on the go.",
+        "tools": ["react-native", "python", "web-socket"],
+        "source": {
+          "github": "https://github.com/Polinkhan/server-monitor"
+        },
+        "img": "/images/pcMonitor.png"
+      },
+      {
+        "name": "TODO App",
+        "description": "This app built with React Native allows users to create, manage, and organize tasks efficiently. With a simple and intuitive interface, users can add, edit, and mark tasks as completed. The app helps users stay productive by providing easy task management and real-time updates for a smooth experience.",
+        "tools": ["react-native", "firebase", "typescript"],
+        "source": {
+          "github": "https://github.com/Polinkhan/awesomeTodoApp"
+        },
+        "img": "/images/todo.png"
+      }
+    ]
+  },
+  "skill": {
+    "header": "My Skills",
+    "label": "Here are some technologies I've used!",
+    "categories": ["Language", "Libraries & Framework", "Database", "DevOps & Machine learning"],
+    "skillList": [
+      {
+        "label": "C",
+        "icon": "/images/c.svg",
+        "category": "Language"
+      },
+      {
+        "label": "C++",
+        "icon": "/images/c-plus-plus.svg",
+        "category": "Language"
+      },
+      {
+        "label": "JAVA",
+        "icon": "/images/java.svg",
+        "category": "Language"
+      },
+      {
+        "label": "PHP",
+        "icon": "/images/php.svg",
+        "category": "Language"
+      },
+      {
+        "label": "PYTHON",
+        "icon": "/images/python.svg",
+        "category": "Language"
+      },
+      {
+        "label": "JAVASCRIPT",
+        "icon": "/images/javascript.svg",
+        "category": "Language"
+      },
+      {
+        "label": "TYPESCRIPT",
+        "icon": "/images/typescript.svg",
+        "category": "Language"
+      },
+      {
+        "label": "REACT",
+        "icon": "/images/react.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "NEXT JS",
+        "icon": "/images/next-js.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "NODE JS",
+        "icon": "/images/nodejs.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "EXPRESS JS",
+        "icon": "/images/express.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "CODEIGNITER",
+        "icon": "/images/codeigniter.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "FLASK",
+        "icon": "/images/flask.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "FastApi",
+        "icon": "/images/fastapi.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "React Native",
+        "icon": "/images/react.svg",
+        "category": "Libraries & Framework"
+      },
+      {
+        "label": "MySQL",
+        "icon": "/images/mysql.svg",
+        "category": "Database"
+      },
+      {
+        "label": "PostgreSQL",
+        "icon": "/images/postgresql.svg",
+        "category": "Database"
+      },
+      {
+        "label": "SQLite",
+        "icon": "/images/sqlite.svg",
+        "category": "Database"
+      },
+      {
+        "label": "MongoDB",
+        "icon": "images/mongodb.svg",
+        "category": "Database"
+      },
+      {
+        "label": "Firebase",
+        "icon": "images/firebase.svg",
+        "category": "Database"
+      },
+      {
+        "label": "Elasticsearch",
+        "icon": "images/elasticsearch.svg",
+        "category": "Database"
+      },
+      {
+        "label": "Docker",
+        "icon": "/images/docker.svg",
+        "category": "DevOps & Machine learning"
+      },
+      {
+        "label": "Elastic Stack",
+        "icon": "/images/elastic.svg",
+        "category": "DevOps & Machine learning"
+      },
+
+      {
+        "label": "YOLO",
+        "icon": "/images/yolo.svg",
+        "category": "DevOps & Machine learning"
+      },
+      {
+        "label": "Pytorch",
+        "icon": "/images/pytorch.svg",
+        "category": "DevOps & Machine learning"
+      },
+      {
+        "label": "Fastai",
+        "icon": "/images/fastai.svg",
+        "category": "DevOps & Machine learning"
+      }
+    ]
+  },
+  "experience": {
+    "header": "My Experience",
+    "label": "Checkout my Experiences!",
+    "experienceList": [
+      {
+        "companyLogo": "/images/Brotecs.png",
+        "companyName": "Brotecs Technologies Ltd.",
+        "totalWorkTime": { "from": "06-01-23", "to": "now" },
+        "companyLocation": "Dhaka, Bangladesh (On-site)",
+        "companyUrl": "https://www.brotecs.com/",
+        "experiences": [
+          {
+            "designation": "Junior Software Engineer II",
+            "workType": "Full-time",
+            "workTime": { "from": "12-01-24", "to": "now" }
+          },
+          {
+            "designation": "Junior Software Engineer I",
+            "workType": "Full-time",
+            "workTime": { "from": "12-01-23", "to": "11-01-24" }
+          },
+          {
+            "designation": "Software Engineer Intern",
+            "workType": "Internship",
+            "workTime": { "from": "06-01-23", "to": "11-30-23" }
+          }
+        ]
+      }
+    ]
+  },
+  "education": {
+    "header": "My Education",
+    "label": "My Education Journey!",
+    "educationList": [
+      {
+        "institutionName": "Stamford University Bangladesh",
+        "degreeName": "Bachalor Of Science (CSE)",
+        "result": "CGPA : 3.75 (Approx)",
+        "duration": "January 2019 - December 2024",
+        "institutionUrl": "https://www.stamforduniversity.edu.bd/"
+      },
+      {
+        "institutionName": "Dr. Mahbubur Rahman Mollah Collage",
+        "degreeName": "Higher School Certificate (HSC)",
+        "result": "GPA : 4.83",
+        "duration": "April 2016 - March 2018"
+      },
+      {
+        "institutionName": "Mohiuddin Badal Collegiate School",
+        "degreeName": "Secondary School Certificate (SSC)",
+        "result": "GPA: 4.94",
+        "duration": "January 2005 - February 2016"
+      }
+    ]
+  },
+  "contact": {
+    "header": "Contact me",
+    "label": "Feel free to contact with me at anytime",
+    "phone": "01756160530",
+    "emails": ["info@polinkhan.com", "abusayedpolin@gmail.com"],
+    "links": []
+  }
+}
