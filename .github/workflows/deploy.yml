@@ -28,7 +28,7 @@ jobs:
         run: tar -czf build.tar.gz --ignore-failed-read .next package.json public next.config.js node_modules
 
       - name: Backup current app
-        uses: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
@@ -41,7 +41,7 @@ jobs:
             fi
 
       - name: Copy build file to EC2
-        uses: appleboy/scp-action@v0.1.5
+        uses: appleboy/scp-action@v0.1.9
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
@@ -50,7 +50,7 @@ jobs:
           target: "${{ secrets.APP_DIR }}"
 
       - name: Extract build to portfolio on EC2
-        uses: appleboy/ssh-action@0.1.5
+        uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
@@ -62,7 +62,7 @@ jobs:
             rm ${{ secrets.APP_DIR }}/build.tar.gz
 
       - name: Restart app on EC2
-        uses: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
