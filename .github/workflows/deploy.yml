@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Archive full project
-        run: tar -czf build.tar.gz --ignore-failed-read .next package.json public next.config.ts node_modules
+        run: tar -czf build.tar.gz --ignore-failed-read .next package.json public next.config.ts
 
       - name: Backup current app
         uses: appleboy/ssh-action@v0.1.9
