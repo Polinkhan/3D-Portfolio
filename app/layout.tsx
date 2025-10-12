@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "Polin Khan is a skilled software engineer specializing in full stack development, React, Node.js, and cloud infrastructure. Currently enhancing expertise in DevOps, Polin is committed to building secure, scalable applications.",
     images: [
       {
-        url: "https://polinkhan.com/images/polinkhan.png",
+        url: "https://polinkhan.com/polinkhan.png",
         width: 475,
         alt: "Polin Khan's profile mockup",
       },
@@ -86,7 +86,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Polin Khan",
               url: "https://polinkhan.com",
-              image: "https://polinkhan.com/images/polinkhan.png",
+              image: "https://polinkhan.com/polinkhan.png",
               jobTitle: "Software Engineer",
               address: {
                 "@type": "PostalAddress",
@@ -118,7 +118,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={cn("bg-[#030014] overflow-y-scroll overflow-x-hidden", inter.className)}>
+      <body
+        className={cn(
+          "bg-[#030014] overflow-y-scroll overflow-x-hidden",
+          inter.className
+        )}
+      >
         <StarsCanvas />
         <Navbar />
         {children}
