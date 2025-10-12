@@ -20,7 +20,7 @@ export const Hero = () => {
       <motion.div
         initial="hidden"
         animate="visible"
-        className="flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-between px-4 sm:px-8 xl:px-0 mt-16 lg:mt-0 w-full z-[20]"
+        className="flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-between px-3 sm:px-8 xl:px-0 mt-16 lg:mt-0 w-full z-[20]"
       >
         <div className=" flex flex-col gap-4 lg:gap-5 text-start">
           <Header className="flex lg:hidden" />
@@ -34,16 +34,16 @@ export const Hero = () => {
 
           <motion.p
             variants={slideInFromLeft(0.8)}
-            className="text-sm lg:text-lg text-gray-400 my-5 max-w-[600px]"
+            className="text-sm lg:text-lg text-gray-400 my-5 md:max-w-[600px]"
           >
             {data.description}
           </motion.p>
 
-          <div className="flex flex-row justify-center lg:justify-start gap-5 ">
+          <div className="flex flex-row justify-center lg:justify-start gap-5">
             <motion.a
               href="#skills"
               variants={slideInFromLeft(1)}
-              className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-[180px]"
+              className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-full sm:w-[180px]"
             >
               View Skills
             </motion.a>
@@ -52,7 +52,7 @@ export const Hero = () => {
               download
               href="/Polin_Khan_CV.pdf"
               variants={slideInFromLeft(1)}
-              className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-[180px]"
+              className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-full sm:w-[180px]"
               aria-label="Download Polin Khan's CV"
             >
               Download CV
@@ -76,12 +76,12 @@ const HeilightText = ({ className }: { className?: string }) => {
     <motion.div
       variants={slideInFromTop}
       className={cn(
-        "py-[8px] pl-[8px] pr-[12px] border border-[#7042f88b] opacity-[0.9]] flex items-center w-max rounded-full mx-auto",
+        "py-[8px] pl-[8px] pr-[12px] border border-[#7042f88b] opacity-[0.9]] flex items-center max-w-max rounded-full mx-auto",
         className
       )}
     >
       <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-      <h1 className="Welcome-text text-[11px] lg:text-[14px]">{heilightText}</h1>
+      <h3 className="Welcome-text text-[10px] lg:text-[14px]">{heilightText}</h3>
     </motion.div>
   );
 };
@@ -97,7 +97,7 @@ const Header = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <h1 className="text-4xl lg:text-6xl text-center lg:text-start">
+      <h1 className="text-3xl sm:text-4xl lg:text-6xl text-center lg:text-start">
         {header.start}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
           {header.colored}
@@ -113,27 +113,32 @@ const ImageConnent = ({ className }: { className?: string }) => {
     <motion.div
       variants={slideInFromRight(0.8)}
       className={cn(
-        "w-full h-[300px] lg:h-[400px] flex justify-center items-center relative",
+        "relative flex justify-center items-center mx-auto w-full max-w-[300px] sm:max-w-[400px] aspect-square",
         className
       )}
     >
-      <Image
-        src="/polinkhan.png"
-        alt="Polin Khan, Software Engineer"
-        height={500}
-        width={500}
-        draggable={false}
-        className="select-none z-10 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px]"
-      />
+      {/* Main Image (fluid & responsive) */}
+      <div className="relative w-full h-full z-10">
+        <Image
+          src="/polinkhan.png"
+          alt="Polin Khan, Software Engineer"
+          fill
+          priority
+          draggable={false}
+          className="object-contain select-none"
+        />
+      </div>
+
+      {/* Background SVG */}
       <img
         src="/hero-bg.svg"
         alt=""
-        height={"200%"}
-        width={"200%"}
         draggable={false}
-        className="select-none absolute "
+        className="absolute w-[150%] h-[150%] select-none object-cover"
       />
-      <span className="absolute h-60 lg:h-80 w-60 lg:w-80 top-1/2 left-1/2 translate-[-50%] rounded-full shadow-[0_0_20px_rgba(180,120,255,0.7),0_0_40px_rgba(120,80,255,1)] animate-pulse"></span>
+
+      {/* Glowing Pulse Effect */}
+      <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[60%] rounded-full shadow-[0_0_20px_rgba(180,120,255,0.7),0_0_40px_rgba(120,80,255,1)] animate-pulse" />
     </motion.div>
   );
 };
