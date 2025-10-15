@@ -74,7 +74,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  sitemap: "https://polinkhan.com/sitemap.xml",
+  alternates: {
+    canonical: "https://polinkhan.com",
+    languages: {
+      "en-US": "https://polinkhan.com/en-US",
+    },
+  },
 };
 
 export default function RootLayout({
