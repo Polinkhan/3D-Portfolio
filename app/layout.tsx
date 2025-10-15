@@ -74,6 +74,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  sitemap: "https://polinkhan.com/sitemap.xml",
 };
 
 export default function RootLayout({

@@ -1,0 +1,31 @@
+# ================================
+# Polin Khan Portfolio Robots.txt
+# ================================
+# Website: https://polinkhan.com
+# Author: Polin Khan
+# Purpose: Allow search engines to index pages for SEO while
+# clearly specifying AI content usage policy.
+# Last Updated: 2025-10-15
+# ================================
+
+# --- Crawler Access Rules ---
+User-agent: \*
+Allow: /
+
+# --- Sitemap Location ---
+Sitemap: https://polinkhan.com/sitemap.xml
+
+# --- AI and Content Usage Policy ---
+# The following "content-signal" declarations clarify how this site's
+# content may be accessed and used by automated systems.
+
+# search: yes
+# ai-input: no
+# ai-train: no
+
+# Conditions:
+# (a) If content-signal = yes, automated systems may collect content for that use.
+# (b) If content-signal = no, automated systems may not collect content for that use.
+# (c) If the website operator omits a signal, no permission is granted or denied.
+# (d) These signals are expressed reservations of rights under
+#     EU Directive 2019/790 on Copyright in the Digital Single Market.
