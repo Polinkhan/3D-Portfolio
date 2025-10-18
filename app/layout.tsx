@@ -51,6 +51,24 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Polin Khan's profile",
       },
+      {
+        url: "https://polinkhan.com/polinkhan_schema.png",
+        width: 720,
+        height: 720,
+        alt: "Polin Khan's profile",
+      },
+      {
+        url: "https://polinkhan.com/Polinkhan_linkedin.jpeg",
+        width: 800,
+        height: 800,
+        alt: "Polin Khan's Linkedin profile",
+      },
+      {
+        url: "https://polinkhan.com/Polinkhan_facebook.jpg",
+        width: 800,
+        height: 800,
+        alt: "Polin Khan's Linkedin profile",
+      }      
     ],
     type: "website",
     locale: "en_US",
@@ -118,9 +136,9 @@ export default function RootLayout({
               "@id": "https://polinkhan.com/#person",
               name: "Polin Khan",
               url: "https://polinkhan.com",
-              image: "https://polinkhan.com/polinkhan_cover.png",
+              image: "https://polinkhan.com/polinkhan_schema.png",
               jobTitle: "Software Engineer",
-              email: "mailto:abusayedpolin@gmail.com",
+              email: "mailto:info@polinkhan.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Dhaka",
@@ -145,7 +163,7 @@ export default function RootLayout({
                 name: "Brotecs Technologies Ltd.",
                 url: "https://brotecs.com",
               },
-              knowsAbout: ["React.js", "Node.js", "DevOps", "AWS", "Docker"],
+              knowsAbout: ["React", "React.js", "Node.js","Express.js", "DevOps", "AWS", "Docker"],
               birthDate: "1999-11-10",
             }),
           }}
