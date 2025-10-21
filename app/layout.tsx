@@ -31,12 +31,8 @@ export const metadata: Metadata = {
     "Brotecs Technologies Ltd.",
   ],
   icons: {
-    icon: [
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.png", href: "/favicon.png" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/favicon.svg", href: "/favicon.svg" }],
+    apple: "/apple-touch-icon.svg",
   },
   openGraph: {
     title: "Polin Khan | Software Engineer",
@@ -68,7 +64,7 @@ export const metadata: Metadata = {
         width: 800,
         height: 800,
         alt: "Polin Khan's Linkedin profile",
-      }      
+      },
     ],
     type: "website",
     locale: "en_US",
@@ -76,8 +72,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Polin Khan | Software Engineer",
-    description:
-      "Full Stack Software Engineer specializing in React, Node.js, DevOps, and Cloud Infrastructure.",
+    description: "Full Stack Software Engineer specializing in React, Node.js, DevOps, and Cloud Infrastructure.",
     images: ["https://polinkhan.com/polinkhan_cover.png"],
     creator: "@abusayedpolin",
   },
@@ -111,20 +106,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
         <link rel="canonical" href="https://polinkhan.com" />
-        <link
-          rel="preload"
-          href="/fonts/GeistVF.woff"
-          as="font"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/GeistMonoVF.woff"
-          as="font"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
+        <link rel="preload" href="/fonts/GeistVF.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/GeistMonoVF.woff" as="font" type="font/woff" crossOrigin="anonymous" />
 
         {/* Enhanced JSON-LD Schema */}
         <script
@@ -136,7 +119,7 @@ export default function RootLayout({
               "@id": "https://polinkhan.com/#person",
               name: "Polin Khan",
               url: "https://polinkhan.com",
-              image: "https://polinkhan.com/polinkhan_schema.png",
+              image: "https://polinkhan.com/Polinkhan_facebook.jpg",
               jobTitle: "Software Engineer",
               email: "mailto:info@polinkhan.com",
               address: {
@@ -163,7 +146,7 @@ export default function RootLayout({
                 name: "Brotecs Technologies Ltd.",
                 url: "https://brotecs.com",
               },
-              knowsAbout: ["React", "React.js", "Node.js","Express.js", "DevOps", "AWS", "Docker"],
+              knowsAbout: ["React", "React.js", "Node.js", "Express.js", "DevOps", "AWS", "Docker"],
               birthDate: "1999-11-10",
             }),
           }}
